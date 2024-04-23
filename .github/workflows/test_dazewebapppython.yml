@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - DazeWebAppPython
 on:
   push:
     branches:
-      - main
+      - test
   workflow_dispatch:
 
 jobs:
@@ -65,9 +65,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1C3B81011F144CD6976F390FDE0107B6 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F16435C112B947A780ADA9C5CC25795C }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F4CD02A16C6B4BF894E760A7292BD65E }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3EF2A4A6273E49099422E6CB53B0A7A3 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_66B552A9F15D45A081BD12BC8CB8AA60 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5EACBDB37C01413B97DD866BB107AF6A }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
